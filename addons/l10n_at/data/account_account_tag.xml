@@ -1,373 +1,538 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-        <!-- Vorlagen: Steuerdefinition -->
-        <!-- Vorlagen: Verkauf (Umsatzsteuer) -->
-        <!-- Lieferungen, sonstige Leistungen und Eigenverbrauch +000,+001,-021 -->
         <record
-            id="tax_tag_kz_000"
+            id="account_tag_l10n_at_AAI1"
             model="account.account.tag">
-            <field name="name">KZ 000</field>
-            <field name="applicability">taxes</field>
+            <field name="name">Bilanz AAI1</field>
+            <field name="applicability">accounts</field>
             <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_001"
+            id="account_tag_l10n_at_AAI2"
             model="account.account.tag">
-            <field name="name">KZ 001</field>
-            <field name="applicability">taxes</field>
+            <field name="name">Bilanz AAI2</field>
+            <field name="applicability">accounts</field>
             <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_021"
+            id="account_tag_l10n_at_AAI3"
             model="account.account.tag">
-            <field name="name">KZ 021</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
-        </record>
-        <!-- Umsätze, für die die Steuerschuld gemäß § 19 Abs. 1 zweiter Satz sowie gemäß § 19 Abs. 1a, 1b, 1c, 1d und 1e (Umsätze ab 01.07.2010) auf den Leistungsempfänger übergegangen ist. -->
-        <!-- Steuerfreier Umsatz +011, +012, +015, +017, +018, +019, +016, +020 -->
-        <record
-            id="tax_tag_kz_011"
-            model="account.account.tag">
-            <field name="name">KZ 011</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz AAI3</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_012"
+            id="account_tag_l10n_at_AAII1"
             model="account.account.tag">
-            <field name="name">KZ 012</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz AAII1</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_015"
+            id="account_tag_l10n_at_AAII2"
             model="account.account.tag">
-            <field name="name">KZ 015</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz AAII2</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_017"
+            id="account_tag_l10n_at_AAII3"
             model="account.account.tag">
-            <field name="name">KZ 017</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz AAII3</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_018"
+            id="account_tag_l10n_at_AAII4"
             model="account.account.tag">
-            <field name="name">KZ 018</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz AAII4</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_019"
+            id="account_tag_l10n_at_AAIII"
             model="account.account.tag">
-            <field name="name">KZ 019</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz AAIII</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_016"
+            id="account_tag_l10n_at_AAIII1"
             model="account.account.tag">
-            <field name="name">KZ 016</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz AAIII1</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_020"
+            id="account_tag_l10n_at_AAIII2"
             model="account.account.tag">
-            <field name="name">KZ 020</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
-        </record>
-        <!-- Ausfuhrlieferungen (§ 6 Abs. 1 Z 1 iVm § 7) -->
-        <!-- Lohnveredelungen (§ 6 Abs. 1 Z 1 iVm § 8) -->
-        <!-- § 6 Abs. 1 Z 2 bis 6 sowie § 23 Abs. 5 (Seeschifffahrt, Luftfahrt, grenzüberschreitende Personenbeförderung, Diplomaten, Reisevorleistungen im Drittlandsgebiet usw.) -->
-        <!-- Innergemeinschaftliche Lieferungen ohne Fahrzeuglieferungen (Art. 6 Abs. 1) -->
-        <!-- EU Fahrzeuglieferungen (Art. 6 Abs. 1) -->
-        <!-- § 6 Abs. 1 Z 9 lit. a (Grundstücksumsätze) -->
-        <!-- § 6 Abs. 1 Z 27 (Kleinunternehmer) -->
-        <!-- § 6 Abs. 1 Z 1, 7-8, 10-26, 28 (übrige steuerfreie Umsätze ohne Vorsteuerabzug) -->
-        <!-- zu versteuernder Umsatz +022, +029, +006, +037, +052, +007 -->
-        <record
-            id="tax_tag_kz_022"
-            model="account.account.tag">
-            <field name="name">KZ 022</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz AAIII2</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_029"
+            id="account_tag_l10n_at_AAIII3"
             model="account.account.tag">
-            <field name="name">KZ 029</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz AAIII3</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_006"
+            id="account_tag_l10n_at_AAIII4"
             model="account.account.tag">
-            <field name="name">KZ 006</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz AAIII4</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_037"
+            id="account_tag_l10n_at_AAIII5"
             model="account.account.tag">
-            <field name="name">KZ 037</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz AAIII5</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_052"
+            id="account_tag_l10n_at_AAIII6"
             model="account.account.tag">
-            <field name="name">KZ 052</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz AAIII6</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_007"
+            id="account_tag_l10n_at_ABI1"
             model="account.account.tag">
-            <field name="name">KZ 007</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
-        </record>
-        <!-- Soll-Umsatzsteuern (=normale Umsatzsteuer) -->
-        <!-- 12% für Weinumsätze durch landwirtschaftliche Betriebe -->
-        <!-- 19% für Gemeinden Jungholz und Mittelberg -->
-        <!-- 10% Zusatzsteuer für pauschalierte land- und forstwirtschaftliche Betriebe -->
-        <!-- 8% Zusatzsteuer für pauschalierte land- und forstwirtschaftliche Betriebe -->
-        <!-- zu versteuernder Umsatz (Eigenverbrauch) +022, +029, +025, +037, +052, +038 -->
-        <!-- Übergegangene Steuerschuld +056, +057, +048, +044, +032 -->
-        <record
-            id="tax_tag_kz_056"
-            model="account.account.tag">
-            <field name="name">KZ 056</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz ABI1</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_057"
+            id="account_tag_l10n_at_ABI2"
             model="account.account.tag">
-            <field name="name">KZ 057</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz ABI2</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_048"
+            id="account_tag_l10n_at_ABI3"
             model="account.account.tag">
-            <field name="name">KZ 048</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz ABI3</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_044"
+            id="account_tag_l10n_at_ABI4"
             model="account.account.tag">
-            <field name="name">KZ 044</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz ABI4</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_032"
+            id="account_tag_l10n_at_ABI5"
             model="account.account.tag">
-            <field name="name">KZ 032</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
-        </record>
-        <!-- Steuerschuld gemäß § 11 Abs. 12 und 14, § 16 Abs. 2 sowie gemäß Art. 7 Abs. 4 -->
-        <!-- Steuerschuld gemäß § 19 Abs. 1b (Sicherungseigentum, Vorbehaltseigentum und Grundstücke im Zwangsversteigerungsverfahren) -->
-        <!-- Steuerschuld gemäß § 19 Abs. 1 zweiter Satz, § 19 Abs. 1c sowie gemäß Art. 25 Abs. 5 -->
-        <!-- Steuerschuld gemäß § 19 Abs. 1d (Schrott und Abfallstoffe) -->
-        <!-- Innergemeinschaftlicher Erwerb (Erwerbssteuer) 070 abzgl. 071 -->
-        <record
-            id="tax_tag_kz_070"
-            model="account.account.tag">
-            <field name="name">KZ 070</field>
-            <field name="applicability">taxes</field>
+            <field name="name">Bilanz ABI5</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_071"
+            id="account_tag_l10n_at_ABII1"
             model="account.account.tag">
-            <field name="name">KZ 071</field>
-            <field name="applicability">taxes</field>
-        </record>
-        <!-- Davon steuerfrei gemäß Art. 6 Abs. 2 (IGE-UST) -->
-        <!-- Innergemeinschaftlicher Erwerb (Erwerbssteuer) 072, 073, 075(bis 06/2007), 088 (ab 07/2007), 076, 077 Negativer Betrag für Sofortabzug (in Rechnungen) und negative Umkehr (Steuerkonto), um 
-            die Umsatzsteuer im Steuerplan abzubilden -->
-        <record
-            id="tax_tag_kz_072"
-            model="account.account.tag">
-            <field name="name">KZ 072</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz ABII1</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_073"
+            id="account_tag_l10n_at_ABII2"
             model="account.account.tag">
-            <field name="name">KZ 073</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz ABII2</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_008"
+            id="account_tag_l10n_at_ABII3"
             model="account.account.tag">
-            <field name="name">KZ 008</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz ABII3</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_088"
+            id="account_tag_l10n_at_ABII4"
             model="account.account.tag">
-            <field name="name">KZ 088</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz ABII4</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_076"
+            id="account_tag_l10n_at_ABIII"
             model="account.account.tag">
-            <field name="name">KZ 076</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz ABIII</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_077"
+            id="account_tag_l10n_at_ABIII1"
             model="account.account.tag">
-            <field name="name">KZ 077</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
-        </record>
-        <!-- Vorlagen: Einkauf (Vorsteuer) -->
-        <!-- Vorsteuern -060, -061, -083, -065(070), -066(057), -082, -087, -089, !-064, +062, -063, -067! -->
-        <record
-            id="tax_tag_kz_060"
-            model="account.account.tag">
-            <field name="name">KZ 060</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz ABIII1</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_061"
+            id="account_tag_l10n_at_ABIII2"
             model="account.account.tag">
-            <field name="name">KZ 061</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz ABIII2</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_083"
+            id="account_tag_l10n_at_ABIV"
             model="account.account.tag">
-            <field name="name">KZ 083</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz ABIV</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_065"
+            id="account_tag_l10n_at_AC"
             model="account.account.tag">
-            <field name="name">KZ 065</field>
-            <field name="applicability">taxes</field>
+            <field name="name">Bilanz AC</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_066"
+            id="account_tag_l10n_at_AD"
             model="account.account.tag">
-            <field name="name">KZ 066</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz AD</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_082"
+            id="account_tag_l10n_at_PAI"
             model="account.account.tag">
-            <field name="name">KZ 082</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz PAI</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_087"
+            id="account_tag_l10n_at_PAII"
             model="account.account.tag">
-            <field name="name">KZ 087</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz PAII</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_089"
+            id="account_tag_l10n_at_PAII1"
             model="account.account.tag">
-            <field name="name">KZ 089</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz PAII1</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_064"
+            id="account_tag_l10n_at_PAII2"
             model="account.account.tag">
-            <field name="name">KZ 064</field>
-            <field name="applicability">taxes</field>
+            <field name="name">Bilanz PAII2</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_062"
+            id="account_tag_l10n_at_PAIII"
             model="account.account.tag">
-            <field name="name">KZ 062</field>
-            <field name="applicability">taxes</field>
-        </record>
-        <!-- Vorsteuern betreffend die entrichtete Einfuhrumsatzsteuer (§ 12 Abs. 1 Z 2 lit. a) -->
-        <!-- Vorsteuern betreffend die geschuldete, auf dem Abgabenkonto verbuchte Einfuhrumsatzsteuer (§ 12 Abs. 1 Z 2 lit. b) -->
-        <!-- VST_082 (§ 19 Abs. 1a - Bauleistungen) -->
-        <!-- Vorsteuern betreffend die Steuerschuld gemäß § 19 Abs. 1b (Sicherungseigentum, Vorbehaltseigentum und Grundstücke im Zwangsversteigerungsverfahren) -->
-        <!-- Vorsteuern betreffend der Steuerschuld gemäß § 19 Abs. 1 zweiter Satz, § 19 Abs. 1c sowie gemäß Art. 25 Abs. 5 -->
-        <!-- Vorsteuern betreffend die Steuerschuld gemäß § 19 Abs. 1d (Schrott und Abfallstoffe) -->
-        <!-- Berichtigungen -063, -067, -090 ! -->
-        <record
-            id="tax_tag_kz_063"
-            model="account.account.tag">
-            <field name="name">KZ 063</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz PAIII</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_067"
+            id="account_tag_l10n_at_PAIII1"
             model="account.account.tag">
-            <field name="name">KZ 067</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz PAIII1</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_090"
+            id="account_tag_l10n_at_PAIII2"
             model="account.account.tag">
-            <field name="name">KZ 090</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz PAIII2</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_095"
+            id="account_tag_l10n_at_PAIII3"
             model="account.account.tag">
-            <field name="name">KZ 095</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
-        </record>
-        <!-- Berichtigung gemäß § 12 Abs. 10 und 11 -->
-        <!-- Berichtigung gemäß § 16 -->
-        <!-- Sonstige Berichtigungen -->
-        <!-- Vorsteuern 027, 028 in 060/065 -->
-        <record
-            id="tax_tag_kz_027"
-            model="account.account.tag">
-            <field name="name">KZ 027</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz PAIII3</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
         <record
-            id="tax_tag_kz_028"
+            id="account_tag_l10n_at_PAIV"
             model="account.account.tag">
-            <field name="name">KZ 028</field>
-            <field name="applicability">taxes</field>
-            <field name="color" eval="2" />
+            <field name="name">Bilanz PAIV</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
         </record>
-        <!-- Vorsteuern betreffend KFZ nach EKR 063, 064, 732-733 und 744-747 -->
-        <!-- Vorsteuern betreffend Gebäude nach EKR 030-037 und 070, 071 -->
-        <!-- Innergemeinschaftlicher Erwerb 070 abzgl. 071 ! -->
-        <!-- Innergemeinschaftlicher Erwerb (Vorsteuerabzug) 072, 073, 075(bis 06/2007), 088 (ab 07/2007), 076, 077 -->
-        <!-- Vorsteuerabzug für innergemeinschaftliche Erwerbe (20%) -->
-        <!-- Vorsteuerabzug für innergemeinschaftliche Erwerbe (10%) -->
-        <!-- Vorsteuerabzug für Jungholz und Mittelberg (19%) -->
-        <!-- Erwerbe gemäß Art. 3 Abs. 8 zweiter Satz, die im Mitgliedstaat des Bestimmungslandes besteuert worden sind (IGE-VST) -->
-        <!-- Erwerbe gemäß Art. 3 Abs. 8 zweiter Satz, die gemäß Art. 25 Abs. 2 im Inland als besteuert gelten (IGE-VST) -->
+        <record
+            id="account_tag_l10n_at_PBI"
+            model="account.account.tag">
+            <field name="name">Bilanz PBI</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_PBII"
+            model="account.account.tag">
+            <field name="name">Bilanz PBII</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_PBIII"
+            model="account.account.tag">
+            <field name="name">Bilanz PBIII</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_PBIV"
+            model="account.account.tag">
+            <field name="name">Bilanz PBIV</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_PCI"
+            model="account.account.tag">
+            <field name="name">Bilanz PCI</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_PCII"
+            model="account.account.tag">
+            <field name="name">Bilanz PCII</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_PCIII"
+            model="account.account.tag">
+            <field name="name">Bilanz PCIII</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_PCIV"
+            model="account.account.tag">
+            <field name="name">Bilanz PCIV</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_PCV"
+            model="account.account.tag">
+            <field name="name">Bilanz PCV</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_PCVI"
+            model="account.account.tag">
+            <field name="name">Bilanz PCVI</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_PCVII"
+            model="account.account.tag">
+            <field name="name">Bilanz PCVII</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_PCVIII"
+            model="account.account.tag">
+            <field name="name">Bilanz PCVIII</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_PCVIII1"
+            model="account.account.tag">
+            <field name="name">Bilanz PCVIII1</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_PCVIII2"
+            model="account.account.tag">
+            <field name="name">Bilanz PCVIII2</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_PD"
+            model="account.account.tag">
+            <field name="name">Bilanz PD</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+
+        <record
+            id="account_tag_l10n_at_EBIT1"
+            model="account.account.tag">
+            <field name="name">GuV EBIT1</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_EBIT2"
+            model="account.account.tag">
+            <field name="name">GuV EBIT2</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_EBIT3"
+            model="account.account.tag">
+            <field name="name">GuV EBIT3</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_EBIT4"
+            model="account.account.tag">
+            <field name="name">GuV EBIT4</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_EBIT4I"
+            model="account.account.tag">
+            <field name="name">GuV EBIT4I</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_EBIT4II"
+            model="account.account.tag">
+            <field name="name">GuV EBIT4II</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_EBIT4III"
+            model="account.account.tag">
+            <field name="name">GuV EBIT4III</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_EBIT5I"
+            model="account.account.tag">
+            <field name="name">GuV EBIT5I</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_EBIT5II"
+            model="account.account.tag">
+            <field name="name">GuV EBIT5II</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_EBIT6I"
+            model="account.account.tag">
+            <field name="name">GuV EBIT6I</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_EBIT6II"
+            model="account.account.tag">
+            <field name="name">GuV EBIT6II</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_EBIT7I"
+            model="account.account.tag">
+            <field name="name">GuV EBIT7I</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_EBIT7II"
+            model="account.account.tag">
+            <field name="name">GuV EBIT7II</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_EBIT8"
+            model="account.account.tag">
+            <field name="name">GuV EBIT8</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_FIN10"
+            model="account.account.tag">
+            <field name="name">GuV FIN10</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_FIN11"
+            model="account.account.tag">
+            <field name="name">GuV FIN11</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_FIN12"
+            model="account.account.tag">
+            <field name="name">GuV FIN12</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_FIN13"
+            model="account.account.tag">
+            <field name="name">GuV FIN13</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_FIN14"
+            model="account.account.tag">
+            <field name="name">GuV FIN14</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_FIN15"
+            model="account.account.tag">
+            <field name="name">GuV FIN15</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_TAX"
+            model="account.account.tag">
+            <field name="name">GuV TAX</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_MTAX"
+            model="account.account.tag">
+            <field name="name">GuV MTAX</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
+        <record
+            id="account_tag_l10n_at_RL"
+            model="account.account.tag">
+            <field name="name">GuV RL</field>
+            <field name="applicability">accounts</field>
+            <field name="color" eval="1" />
+        </record>
     </data>
 </odoo>

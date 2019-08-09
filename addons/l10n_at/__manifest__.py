@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+# Copyright (c) 2015 WT-IO-IT GmbH (https://www.wt-io-it.at)
+#                    Mag. Wolfgang Taferner <wolfgang.taferner@wt-io-it.at>
+
 # List of contributors:
 # Mag. Wolfgang Taferner <wolfgang.taferner@wt-io-it.at>
 # Josse Colpaert <jco@odoo.com>
@@ -18,7 +21,7 @@ Austrian charts of accounts (Einheitskontenrahmen 2010).
 ==========================================================
 
     * Defines the following chart of account templates:
-        * Austrian general chart of accounts 2008
+        * Austrian General Chart of accounts 2010
     * Defines templates for sale and purchase VAT
     * Defines tax templates
     * Defines fiscal positions for Austrian fiscal legislation
@@ -31,6 +34,7 @@ Austrian charts of accounts (Einheitskontenrahmen 2010).
         "base_vat",
     ],
     "data": [
+        'data/account_account_tag.xml',
         'data/account_account_template.xml',
         'data/account_chart_template.xml',
         'data/account_tax_report_data.xml',

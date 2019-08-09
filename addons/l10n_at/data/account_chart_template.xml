@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <menuitem id="account_reports_at_statements_menu" name="Austria" parent="account.menu_finance_reports" sequence="0" groups="account.group_account_user"/>
+    <menuitem id="menu_finance_austria" name="Austria" parent="account.menu_finance_reports" sequence="-1" groups="account.group_account_user"/>
 
     <data>
         <!-- Vorlagen: Kontenplan -->
