@@ -26,4 +26,5 @@ class WebsiteRating(PortalChatter):
             context = dict(request.context)
             context['rating_include'] = True
             request.context = context
+            domain += [('rating_value', '>=', 1)]
         return super(WebsiteRating, self).portal_message_fetch(res_model, res_id, domain=domain, limit=limit, offset=offset, **kw)
