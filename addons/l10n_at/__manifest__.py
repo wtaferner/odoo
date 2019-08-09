@@ -1,26 +1,36 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-# © 2015 WT-IO IT GmbH <https://www.wt-io-it.at>
 
 # List of contributors:
 # Mag. Wolfgang Taferner <wolfgang.taferner@wt-io-it.at>
 # Josse Colpaert <jco@odoo.com>
 
 {
-    "name": "Austrian Localization",
+    "name": "Austria - Accounting",
     "version": "2.0",
     "author": "WT-IO-IT GmbH, Wolfgang Taferner",
     "website": "https://www.wt-io-it.at",
     "category": "Localization",
     'summary': "Austrian Standardized Charts & Tax",
-    "description": """""",
+    "description": """
+   
+Austrian charts of accounts (Einheitskontenrahmen 2010).
+==========================================================
+
+    * Defines the following chart of account templates:
+        * Austrian general chart of accounts 2008
+    * Defines templates for sale and purchase VAT
+    * Defines tax templates
+    * Defines fiscal positions for Austrian fiscal legislation
+    * Defines tax reports U1/U30
+ 
+    """,
     "depends": [
-        'account',
-        'base_iban',
-        'base_vat',
+        "account",
+        "base_iban",
+        "base_vat",
     ],
     "data": [
-        'data/account_account_tag.xml',
         'data/account_account_template.xml',
         'data/account_chart_template.xml',
         'data/account_tax_report_data.xml',
