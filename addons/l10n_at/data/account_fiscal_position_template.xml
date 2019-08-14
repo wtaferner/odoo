@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-        <!-- Specific Group for Austrian PoV about the European Union Position -->
-        <record id="europe_at" model="res.country.group">
-            <field name="name">European Union (Austria)</field>
-            <field name="country_ids" eval="[(6,0,[
-                ref('base.be'),ref('base.bg'),ref('base.hr'),ref('base.cy'),
-                ref('base.cz'),ref('base.dk'),ref('base.ee'),ref('base.fi'),ref('base.fr'),
-                ref('base.de'),ref('base.gr'),ref('base.hu'),ref('base.ie'),ref('base.it'),
-                ref('base.lv'),ref('base.lt'),ref('base.lu'),ref('base.mt'),ref('base.nl'),
-                ref('base.pl'),ref('base.pt'),ref('base.ro'),ref('base.sk'),ref('base.si'),
-                ref('base.es'),ref('base.se'),ref('base.uk')])]"/>
-        </record>
-
         <!-- Vorlagen: Steuerliche Positionen -->
 
         <record id="fiscal_position_template_national" model="account.fiscal.position.template">
             <field name="name">National</field>
             <field name="auto_apply" eval="True" />
-            <field name="country_group_id" ref="base.europe" />
+            <field name="country_id" ref="base.at" />
             <field name="chart_template_id" ref="l10n_at_chart_template"/>
         </record>
         <record id="fiscal_position_template_eu" model="account.fiscal.position.template">
@@ -35,50 +23,6 @@
         </record>
 
         <!-- Vorlagen: Steuerliche Positionen (Steuerzuordnung) -->
-
-        <!-- National -->
-
-        <record id="fiscal_position_tax_template_national_code022" model="account.fiscal.position.tax.template">
-            <field name="position_id" ref="fiscal_position_template_national" />
-            <field name="tax_src_id" ref="account_tax_template_sales_20_code022" />
-            <field name="tax_dest_id" ref="account_tax_template_sales_20_code022" />
-        </record>
-        <record id="fiscal_position_tax_template_national_katalog022" model="account.fiscal.position.tax.template">
-            <field name="position_id" ref="fiscal_position_template_national" />
-            <field name="tax_src_id" ref="account_tax_template_sales_20_katalog022" />
-            <field name="tax_dest_id" ref="account_tax_template_sales_20_katalog022" />
-        </record>
-        <record id="fiscal_position_tax_template_national_code029" model="account.fiscal.position.tax.template">
-            <field name="position_id" ref="fiscal_position_template_national" />
-            <field name="tax_src_id" ref="account_tax_template_sales_10_code029" />
-            <field name="tax_dest_id" ref="account_tax_template_sales_10_code029" />
-        </record>
-        <record id="fiscal_position_tax_template_national_code007" model="account.fiscal.position.tax.template">
-            <field name="position_id" ref="fiscal_position_template_national" />
-            <field name="tax_src_id" ref="account_tax_template_sales_add7_code007" />
-            <field name="tax_dest_id" ref="account_tax_template_sales_add7_code007" />
-        </record>
-
-        <record id="fiscal_position_tax_template_national_vst_20_code060" model="account.fiscal.position.tax.template">
-            <field name="position_id" ref="fiscal_position_template_national" />
-            <field name="tax_src_id" ref="account_tax_template_purchase_20_code060" />
-            <field name="tax_dest_id" ref="account_tax_template_purchase_20_code060" />
-        </record>
-        <record id="fiscal_position_tax_template_national_vst_20_code060K" model="account.fiscal.position.tax.template">
-            <field name="position_id" ref="fiscal_position_template_national" />
-            <field name="tax_src_id" ref="account_tax_template_purchase_20_misc_code060" />
-            <field name="tax_dest_id" ref="account_tax_template_purchase_20_misc_code060" />
-        </record>
-        <record id="fiscal_position_tax_template_national_vst_10_code060" model="account.fiscal.position.tax.template">
-            <field name="position_id" ref="fiscal_position_template_national" />
-            <field name="tax_src_id" ref="account_tax_template_purchase_10_code060" />
-            <field name="tax_dest_id" ref="account_tax_template_purchase_10_code060" />
-        </record>
-        <record id="fiscal_position_tax_template_national_vst_19_code060" model="account.fiscal.position.tax.template">
-            <field name="position_id" ref="fiscal_position_template_national" />
-            <field name="tax_src_id" ref="account_tax_template_purchase_19_code060" />
-            <field name="tax_dest_id" ref="account_tax_template_purchase_19_code060" />
-        </record>
 
         <!-- Eurpäische Union (Binnenmarkt)) -->
 
