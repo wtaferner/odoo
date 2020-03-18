@@ -19,6 +19,9 @@ class ProcurementRule(models.Model):
         if not bom:
             msg = _('There is no Bill of Material found for the product %s. Please define a Bill of Material for this product.') % (product_id.display_name,)
             raise UserError(msg)
+        if values.get('warehouse_id') and not values.get('warehouse_id').manu_type_id.active:
+            msg = _('Can not manufacture %s as the needed picking type in %s is not active.\n') % (product_id.with_context(display_default_code=False).display_name, values.get('warehouse_id').display_name,)
+            raise UserError(msg)
 
         # create the MO as SUPERUSER because the current user may not have the rights to do it (mto product launched by a sale for example)
         production = ProductionSudo.create(self._prepare_mo_vals(product_id, product_qty, product_uom, location_id, name, origin, values, bom))
