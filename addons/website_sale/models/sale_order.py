@@ -90,7 +90,7 @@ class SaleOrder(models.Model):
     def _website_product_id_change(self, order_id, product_id, qty=0):
         order = self.sudo().browse(order_id)
         product_context = dict(self.env.context)
-        product_context.setdefault('lang', order.partner_id.lang)
+        product_context.setdefault('lang', order.partner_id.lang or request._context.get('lang'))
         product_context.update({
             'partner': order.partner_id.id,
             'quantity': qty,
@@ -138,7 +138,7 @@ class SaleOrder(models.Model):
 
         order = self.sudo().browse(order_id)
         product_context = dict(self.env.context)
-        product_context.setdefault('lang', order.partner_id.lang)
+        product_context.setdefault('lang', order.partner_id.lang or request._context.get('lang'))
         product = self.env['product.product'].with_context(product_context).browse(product_id)
 
         name = product.display_name
@@ -212,7 +212,7 @@ class SaleOrder(models.Model):
             if self.pricelist_id.discount_policy == 'with_discount' and not self.env.context.get('fixed_price'):
                 order = self.sudo().browse(self.id)
                 product_context = dict(self.env.context)
-                product_context.setdefault('lang', order.partner_id.lang)
+                product_context.setdefault('lang', order.partner_id.lang or request._context.get('lang'))
                 product_context.update({
                     'partner': order.partner_id.id,
                     'quantity': quantity,

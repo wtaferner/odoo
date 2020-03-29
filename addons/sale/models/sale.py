@@ -11,6 +11,7 @@ from odoo import api, fields, models, _
 from odoo.exceptions import UserError, AccessError
 from odoo.osv import expression
 from odoo.tools import float_is_zero, float_compare, DEFAULT_SERVER_DATETIME_FORMAT
+from odoo.http import request
 
 from odoo.tools.misc import formatLang
 
@@ -1065,7 +1066,7 @@ class SaleOrderLine(models.Model):
             vals['product_uom_qty'] = 1.0
 
         product = self.product_id.with_context(
-            lang=self.order_id.partner_id.lang,
+            lang=self.order_id.partner_id.lang or request._context.get('lang'),
             partner=self.order_id.partner_id.id,
             quantity=vals.get('product_uom_qty') or self.product_uom_qty,
             date=self.order_id.date_order,
@@ -1108,7 +1109,7 @@ class SaleOrderLine(models.Model):
             return
         if self.order_id.pricelist_id and self.order_id.partner_id:
             product = self.product_id.with_context(
-                lang=self.order_id.partner_id.lang,
+                lang=self.order_id.partner_id.lang or request._context.get('lang'),
                 partner=self.order_id.partner_id.id,
                 quantity=self.product_uom_qty,
                 date=self.order_id.date_order,
@@ -1213,7 +1214,7 @@ class SaleOrderLine(models.Model):
 
         self.discount = 0.0
         product = self.product_id.with_context(
-            lang=self.order_id.partner_id.lang,
+            lang=self.order_id.partner_id.lang or request._context.get('lang'),
             partner=self.order_id.partner_id.id,
             quantity=self.product_uom_qty,
             date=self.order_id.date_order,

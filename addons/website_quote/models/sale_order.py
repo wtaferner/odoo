@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 from odoo import api, fields, models, _
 from odoo.tools.translate import html_translate
 from odoo.addons import decimal_precision as dp
+from odoo.http import request
 
 from werkzeug.urls import url_encode
 
@@ -251,7 +252,7 @@ class SaleOrderOption(models.Model):
     def _onchange_product_id(self):
         if not self.product_id:
             return
-        product = self.product_id.with_context(lang=self.order_id.partner_id.lang)
+        product = self.product_id.with_context(lang=self.order_id.partner_id.lang or request._context.get('lang'))
         self.price_unit = product.list_price
         self.website_description = product.quote_description or product.website_description
         self.name = product.name

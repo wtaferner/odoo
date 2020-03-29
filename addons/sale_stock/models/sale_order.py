@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 from odoo import api, fields, models, _
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT, float_compare
 from odoo.exceptions import UserError
+from odoo.http import request
 
 
 class SaleOrder(models.Model):
@@ -166,7 +167,7 @@ class SaleOrderLine(models.Model):
             precision = self.env['decimal.precision'].precision_get('Product Unit of Measure')
             product = self.product_id.with_context(
                 warehouse=self.order_id.warehouse_id.id,
-                lang=self.order_id.partner_id.lang or self.env.user.lang or 'en_US'
+                lang=self.order_id.partner_id.lang or request._context.get('lang') or self.env.user.lang or 'en_US'
             )
             product_qty = self.product_uom._compute_quantity(self.product_uom_qty, self.product_id.uom_id)
             if float_compare(product.virtual_available, product_qty, precision_digits=precision) == -1:
