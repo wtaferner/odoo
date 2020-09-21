@@ -12320,8 +12320,7 @@ msgstr ""
 #: code:addons/account/models/account_move.py:0
 #, python-format
 msgid ""
-"You cannot use this general account in this journal, check the tab 'Entry "
-"Controls' on the related journal."
+"You cannot use %s in %s, check the tab 'Entry Controls' on the related journal."
 msgstr ""
 
 #. module: account
